@@ -1,0 +1,5 @@
+[
+       { "title": "First Post", "content": "This is the first + second post's content", "date": "09-19-2020" },
+       { "title": "Second Post", "content": "This is the second post's content", "date": "09-19-2020" },
+       { "title": "Third Post", "content": "This is the third post's content", "date": "09-19-2020" }
+     ]

@@ -19,7 +19,7 @@
  */
 
 /** IE10 and IE11 requires the following for NgClass support on SVG elements */
-// import 'classlist.js';  // Run `npm install --save classlist.js`.
+import 'classlist.js';  // Run `npm install --save classlist.js`.
 
 /**
  * Web Animations `@angular/platform-browser/animations`
@@ -51,6 +51,14 @@
  *  (window as any).__Zone_enable_cross_context_check = true;
  *
  */
+/** Evergreen browsers require these. **/
+import 'core-js/es6/reflect';
+import 'core-js/es6/symbol';
+import "core-js";
+/** IE10 and IE11 requires the following to support `@angular/animation`. ALL Firefox browsers require the following to support `@angular/animation`. **/
+import 'web-animations-js';  // Run `npm install --save web-animations-js`.
+
+/***************************************************************************************************
 
 /***************************************************************************************************
  * Zone JS is required by default for Angular itself.

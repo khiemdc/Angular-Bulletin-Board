@@ -1,0 +1,51 @@
+<!-- <div class="search-div">
+    <mat-form-field class="search">
+        <input matInput [(ngModel)]="searchKey" placeholder="Search" autocomplete="off" (keyup)="applyFilter()">
+    </mat-form-field>
+</div>
+<div class="mat-elevation-z8">
+    <mat-table [dataSource] = "dataSource" matSort>
+        <ng-container matColumnDef="title">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Title</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.title}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="content">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Content</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.content}} </mat-cell>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        
+        
+    </mat-table>
+</div> -->
+<!-- <mat-form-field>
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+  </mat-form-field> -->
+<mat-accordion >
+  <mat-expansion-panel *ngFor="let post of messages | filter:{ title: filterText, content: filterText } : false">
+    <mat-expansion-panel-header collapsedHeight="30px" expandedHeight="auto">
+        <mat-panel-title>
+            {{ post.title }}
+          </mat-panel-title>
+          
+          <mat-panel-description>
+            {{ post.date }}
+          </mat-panel-description>
+        
+    </mat-expansion-panel-header>
+    
+    <p>{{ post.content }}</p>
+    
+  </mat-expansion-panel>
+</mat-accordion>
+
+
+
+<input type="search" class="form-control filter-list-input" placeholder="Filter"
+                  aria-label="Filter" name="search" [(ngModel)]="filterText" >
+
+                  <!-- <ul>
+                    <li *ngFor="let item of messages | filter:{ title: filterText, content: filterText } : false">{{ item.title }} - {{ item.content }} </li>
+                  </ul> -->
